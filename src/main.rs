@@ -1,6 +1,6 @@
 use rand::Rng;
 
-fn main() 
+fn dev_gen() -> String
 {
     let alpha_glasn = "АЕЁИОУЭЮЯЫ";
     let aplha_sogl = "БВГДДЗКЛМНПРСТФХЦЧШЩ";
@@ -27,7 +27,13 @@ fn main()
 
     dest_string.push(alpha_sogl_vec[rand_sogl]);
     dest_string.push(alpha_glasn_vec[rand_glasn]);
+    
+    dest_string
+}
 
-    println!("{}", dest_string);    
+fn main() 
+{
+    let dev_str = dev_gen();
+    println!("{}", dev_str);
 }
 
