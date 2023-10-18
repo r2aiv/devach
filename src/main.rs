@@ -33,9 +33,14 @@ fn dev_gen() -> String
 
 fn main() 
 {
-    let dev_str = dev_gen();
-    println!("-=< {} >=-\n\n", dev_str);
-    println!("Press CTRL-C to exit");
+    for _i in 0..10
+    {
+        let dev_str = dev_gen();
+        println!("-=< {} >=-", dev_str);
+    }
+    
+
+    println!("\n\nPress CTRL-C to exit");
     loop{};
 }
 
